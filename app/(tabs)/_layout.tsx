@@ -2,10 +2,9 @@ import { Tabs } from "expo-router";
 import React from "react";
 import { Platform } from "react-native";
 
-//@ts-ignore
-import { IconSymbol } from "@/components/ui/IconSymbol";
 import { Colors } from "@/constants/Colors";
 import { useColorScheme } from "@/hooks/useColorScheme";
+import { Ionicons } from "@expo/vector-icons";
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
@@ -18,7 +17,7 @@ export default function TabLayout() {
           title: "Home",
           headerShown: false,
           tabBarIcon: ({ color }) => (
-            <IconSymbol size={28} name="house.fill" color={color} />
+            <Ionicons size={28} name="home" color={color} />
           ),
         }}
       />
@@ -27,7 +26,7 @@ export default function TabLayout() {
         options={{
           title: "list",
           tabBarIcon: ({ color }) => (
-            <IconSymbol size={28} name="paperplane.fill" color={color} />
+            <Ionicons size={28} name="list" color={color} />
           ),
         }}
       />
