@@ -6813,6 +6813,11 @@ react-helmet-async@^1.3.0:
     react-fast-compare "^3.2.0"
     shallowequal "^1.1.0"
 
+react-hook-form@^7.54.2:
+  version "7.54.2"
+  resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-7.54.2.tgz#8c26ed54c71628dff57ccd3c074b1dd377cfb211"
+  integrity sha512-eHpAUgUjWbZocoQYUHposymRb4ZP6d0uwUnooL2uOybA9/3tPUvoAKqEWK1WaSiTxxOfTpffNZP7QwlnM3/gEg==
+
 "react-is@^16.12.0 || ^17.0.0 || ^18.0.0", react-is@^18.0.0, react-is@^18.2.0, react-is@^18.3.1:
   version "18.3.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-18.3.1.tgz#e83557dc12eae63a99e003a46388b1dcbb44db7e"
@@ -7228,6 +7233,11 @@ rimraf@~2.6.2:
   integrity sha512-mwqeW5XsA2qAejG46gYdENaxXjx9onRNCfn7L0duuP4hCuTIi/QO7PDK07KJfp1d+izWPrzEJDcSqBa0OZQriA==
   dependencies:
     glob "^7.1.3"
+
+rn-swipe-button@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/rn-swipe-button/-/rn-swipe-button-2.0.0.tgz#30dee64b8ace4f31e96c2487e9a32a8cfc447ce4"
+  integrity sha512-RhWsDZPDdhTesU0C622MpvEMJcy3YyUJVVue3g/rBUAumhDQmwgnhQ/H70zOeRGcndVaZJAufgvigNnAeJM3JA==
 
 run-parallel@^1.1.9:
   version "1.2.0"
