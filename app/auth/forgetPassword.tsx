@@ -37,7 +37,7 @@ const forgetPassword = () => {
   const onSubmit = () => {
     const values = getValues();
     console.log("Email:", values.email);
-    router.push("auth/otpCode");
+    router.replace("auth/otpCode");
   };
   return (
     <Pressable onPress={() => Keyboard.dismiss()} style={styles.container}>

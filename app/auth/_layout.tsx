@@ -20,6 +20,7 @@ const Stacklayout = () => {
         options={{
           //   headerTitle: "Login Screen",
           headerShown: false,
+          animation: "fade",
         }}
       />
       <Stack.Screen
