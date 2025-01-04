@@ -26,12 +26,21 @@ const Stacklayout = () => {
         name="signup"
         options={{
           headerShown: false,
+          animation: "fade",
         }}
       />
       <Stack.Screen
         name="forgetPassword"
         options={{
           headerShown: false,
+          animation: "fade",
+        }}
+      />
+      <Stack.Screen
+        name="otpCode"
+        options={{
+          headerShown: false,
+          animation: "fade",
         }}
       />
     </Stack>

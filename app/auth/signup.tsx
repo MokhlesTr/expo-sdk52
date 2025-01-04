@@ -47,9 +47,9 @@ const Signup = () => {
 
   const onSubmit = () => {
     const values = getValues();
+    console.log("Email:", values.name);
     console.log("Email:", values.email);
     console.log("Password:", values.password);
-    router.replace("/(tabs)/home");
   };
   return (
     <Pressable onPress={() => Keyboard.dismiss()} style={styles.container}>

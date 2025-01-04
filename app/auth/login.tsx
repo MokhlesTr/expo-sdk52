@@ -47,6 +47,7 @@ const login = () => {
     const values = getValues();
     console.log("Email:", values.email);
     console.log("Password:", values.password);
+
     router.replace("/(tabs)/home");
   };
   return (

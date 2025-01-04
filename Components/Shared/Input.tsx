@@ -20,7 +20,8 @@ interface InputProps {
   title?: string;
   width?: number;
   onSubmitEditing?: any;
-  secureTextEntry?: boolean; // Added for password support
+  secureTextEntry?: boolean;
+  centerContent?: boolean;
 }
 
 const Input = forwardRef<TextInput, InputProps>(
@@ -37,7 +38,8 @@ const Input = forwardRef<TextInput, InputProps>(
       title,
       width = 100,
       onSubmitEditing,
-      secureTextEntry = false, // Default to false
+      secureTextEntry = false,
+      centerContent = false,
     },
     ref
   ) => {
@@ -50,7 +52,7 @@ const Input = forwardRef<TextInput, InputProps>(
             rules={rules}
             render={({ field: { onChange, onBlur, value } }) => (
               <TextInput
-                ref={ref} // Attach the ref here
+                ref={ref}
                 placeholder={placeholder}
                 onBlur={onBlur}
                 onChangeText={onChange}
@@ -60,10 +62,12 @@ const Input = forwardRef<TextInput, InputProps>(
                   {
                     width: icon ? wp(`${width}% - 50`) : wp(`${width}%`),
                   },
+                  centerContent && styles.centeredText,
                 ]}
                 placeholderTextColor={"#939393b4"}
                 onSubmitEditing={onSubmitEditing}
-                secureTextEntry={secureTextEntry} // Pass the prop here
+                secureTextEntry={secureTextEntry}
+                textAlign={centerContent ? "center" : "left"}
               />
             )}
             name={name}
@@ -94,6 +98,10 @@ const styles = StyleSheet.create({
     width: "100%",
     color: "#121212",
     flex: 1,
+  },
+  centeredText: {
+    textAlign: "center",
+    textAlignVertical: "center",
   },
   inputLabel: {
     fontSize: wp("5.5%"),
