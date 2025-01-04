@@ -1,4 +1,5 @@
 import {
+  Keyboard,
   Pressable,
   StyleSheet,
   Text,
@@ -51,7 +52,7 @@ const Signup = () => {
     router.replace("/(tabs)/home");
   };
   return (
-    <View style={styles.container}>
+    <Pressable onPress={() => Keyboard.dismiss()} style={styles.container}>
       <ImageBackground
         style={styles.styledBackground}
         source={require("./../../assets/images/signupBackground.jpg")}
@@ -200,7 +201,7 @@ const Signup = () => {
           </View>
         </View>
       </ImageBackground>
-    </View>
+    </Pressable>
   );
 };
 
@@ -244,6 +245,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginTop: hp("2%"),
     flexDirection: "row",
+    maxWidth: wp("57%"),
     gap: wp("2%"),
     marginStart: wp("3%"),
   },

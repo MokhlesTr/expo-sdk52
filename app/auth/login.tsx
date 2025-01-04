@@ -1,4 +1,5 @@
 import {
+  Keyboard,
   Pressable,
   StyleSheet,
   Text,
@@ -49,7 +50,7 @@ const login = () => {
     router.replace("/(tabs)/home");
   };
   return (
-    <View style={styles.container}>
+    <Pressable onPress={() => Keyboard.dismiss()} style={styles.container}>
       <ImageBackground
         style={styles.styledBackground}
         source={require("./../../assets/images/loginBackground.jpg")}
@@ -121,12 +122,14 @@ const login = () => {
               )}
             />
           </View>
-          <TouchableOpacity
-            onPress={() => router.push("/auth/forgetPassword")}
-            style={styles.forgetPassword}
-          >
-            <Text style={styles.forgetPasswordText}>Forget password ?</Text>
-          </TouchableOpacity>
+          <View style={styles.forgetPassword}>
+            <Link
+              href={"/auth/forgetPassword"}
+              style={styles.forgetPasswordText}
+            >
+              Forget password ?
+            </Link>
+          </View>
           <Pressable
             onPress={() => setIsRememberChecked(!isRememberChecked)}
             style={styles.rememberMeContainer}
@@ -172,7 +175,7 @@ const login = () => {
           </View>
         </View>
       </ImageBackground>
-    </View>
+    </Pressable>
   );
 };
 
@@ -212,11 +215,16 @@ const styles = StyleSheet.create({
     alignContent: "center",
     paddingStart: wp("4.5%"),
   },
-  forgetPassword: { alignItems: "flex-end", marginTop: hp("1.5%") },
+  forgetPassword: {
+    alignItems: "flex-end",
+    marginTop: hp("1.5%"),
+  },
   forgetPasswordText: { color: "grey" },
   rememberMeContainer: {
     alignItems: "center",
     flexDirection: "row",
+    maxWidth: wp("30%"),
+
     gap: wp("2%"),
     marginStart: wp("3%"),
   },
