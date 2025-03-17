@@ -18,7 +18,7 @@ import SwipeButton from "rn-swipe-button";
 const StartPage = () => {
   const router = useRouter();
 
-  let [userLoggedIn, setUserLoggedIn] = useState<Boolean>(true);
+  let [userLoggedIn, setUserLoggedIn] = useState<Boolean>(false);
 
   if (userLoggedIn) {
     return <Redirect href="/(tabs)/home" />;

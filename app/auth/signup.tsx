@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
-import React, { useState } from "react";
+import { useRef, useState } from "react";
 import { Link, useRouter } from "expo-router";
 import { ImageBackground } from "expo-image";
 import { Controller, useForm } from "react-hook-form";
@@ -25,9 +25,9 @@ import {
 } from "@/assets/Svg/Svg";
 
 const Signup = () => {
-  const nameRef = React.useRef<TextInput>(null);
-  const emailRef = React.useRef<TextInput>(null);
-  const passwordRef = React.useRef<TextInput>(null);
+  const nameRef = useRef<TextInput>(null);
+  const emailRef = useRef<TextInput>(null);
+  const passwordRef = useRef<TextInput>(null);
   const {
     control,
     handleSubmit,

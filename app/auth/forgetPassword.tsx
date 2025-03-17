@@ -7,7 +7,6 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
-import React, { useState } from "react";
 import { Link, useRouter } from "expo-router";
 import { ImageBackground } from "expo-image";
 import { Controller, useForm } from "react-hook-form";
@@ -16,10 +15,11 @@ import {
   widthPercentageToDP as wp,
 } from "react-native-responsive-screen";
 import Input from "@/Components/Shared/Input";
+import { useRef } from "react";
 
 const forgetPassword = () => {
-  const emailRef = React.useRef<TextInput>(null);
-  const passwordRef = React.useRef<TextInput>(null);
+  const emailRef = useRef<TextInput>(null);
+  const passwordRef = useRef<TextInput>(null);
   const {
     control,
     handleSubmit,

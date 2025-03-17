@@ -58,18 +58,7 @@ const Home = () => {
             <Text style={styles.styledText2}>toast-message</Text>
           </TouchableOpacity>
           <TouchableOpacity
-            onPress={() =>
-              toast.success("Successss! ✅", {
-                style: {
-                  backgroundColor: "white", // ✅ Light background
-                  borderColor: "#ccc",
-                  borderWidth: 1,
-                },
-                textStyle: {
-                  color: "black", // ✅ Light mode text
-                },
-              })
-            }
+            onPress={() => toast.success("Successss! ✅")}
             style={{ marginVertical: hp("2") }}
           >
             <Text style={styles.styledText2}>backpackapp-io success!</Text>

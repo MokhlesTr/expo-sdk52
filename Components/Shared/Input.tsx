@@ -1,4 +1,4 @@
-import React, { forwardRef } from "react";
+import { forwardRef } from "react";
 import { View, StyleSheet, TextInput, Text } from "react-native";
 import {
   heightPercentageToDP as hp,
