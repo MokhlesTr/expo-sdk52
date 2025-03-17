@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, Redirect, useRouter } from "expo-router";
 import {
   Pressable,
@@ -17,6 +17,13 @@ import SwipeButton from "rn-swipe-button";
 
 const StartPage = () => {
   const router = useRouter();
+
+  let [userLoggedIn, setUserLoggedIn] = useState<Boolean>(true);
+
+  if (userLoggedIn) {
+    return <Redirect href="/(tabs)/home" />;
+  }
+
   return (
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
       <ImageBackground
