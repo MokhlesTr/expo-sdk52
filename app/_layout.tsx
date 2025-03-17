@@ -11,6 +11,8 @@ import { useEffect } from "react";
 import "react-native-reanimated";
 
 import { useColorScheme } from "@/hooks/useColorScheme";
+import { View } from "react-native";
+import Toast from "react-native-toast-message";
 
 SplashScreen.preventAutoHideAsync();
 

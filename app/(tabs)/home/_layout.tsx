@@ -1,7 +1,9 @@
 import DefaultHeaderLeft from "@/Components/Header/DefaultHeaderLeft";
 import DefaultHeaderRight from "@/Components/Header/DefaultHeaderRight";
 import { Stack, useRouter } from "expo-router";
-import { Text, TouchableOpacity } from "react-native";
+import { Text, TouchableOpacity, View } from "react-native";
+import { heightPercentageToDP } from "react-native-responsive-screen";
+import Toast from "react-native-toast-message";
 
 const Stacklayout = () => {
   const router = useRouter();
@@ -35,6 +37,16 @@ const Stacklayout = () => {
           headerTitle: "Others Screen",
         }}
       />
+      <View
+        style={{
+          position: "absolute",
+          top: heightPercentageToDP("2%"),
+          width: "100%",
+          zIndex: 100,
+        }}
+      >
+        <Toast />
+      </View>
     </Stack>
   );
 };
